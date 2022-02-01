@@ -3,7 +3,7 @@
 }
 .container-fluid{
     background-color: #dddd;
-    height: 300px;
+    height: 800px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -11,6 +11,7 @@ width: 400px;
 flex-direction: column;
 padding: 10px;
 margin: 20px auto;
+
 }
 .container-fluid input[type="password"]{
     margin-left: 10px;
@@ -27,6 +28,7 @@ position: relative;
 width: 300px;
 height: 100px;
 opacity: 0;
+
 
 }
 .load span{
