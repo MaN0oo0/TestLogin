@@ -40,10 +40,10 @@ function log() {
     window.open("index.html", "_self");
   }
 }
-
 function addUsers() {
   let username = document.getElementById("User_N");
   let userpassord = document.getElementById("User_P");
+
   if (username.value != "" && userpassord.value != "") {
     var Users = {
       U_Name: username.value,
@@ -65,6 +65,7 @@ function show() {
   }
 
   document.getElementById("tbl").innerHTML = container;
+
   clear();
 }
 
@@ -80,9 +81,11 @@ function clear() {
   document.getElementById("User_P").value = "";
   document.getElementById("User_N").focus();
 }
-// $(document).ready(function () {
-//   $("#done").show();
-// });
+$(document).ready(function () {
+  $("#reg").click(function () {
+    window.open("Register.html", "_blank");
+  });
+});
 //insitliz array to save employee object
 let UsersArr;
 //GET LOCAL STORAGE
@@ -91,8 +94,4 @@ if (localStorage.getItem("Users") == null) {
 } else {
   UsersArr = JSON.parse(localStorage.getItem("Users"));
   show();
-}
-function showTable() {
-  document.getElementById("ss").style.opacity = 1;
-  document.getElementById("ss").style.display = "block";
 }
