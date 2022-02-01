@@ -1,19 +1,19 @@
 .row{
     margin: 20px auto;
 }
-.container-fluid{
+.container{
     background-color: #dddd;
-    height: 800px;
+    height: 400px;
 display: flex;
 justify-content: center;
 align-items: center;
-width: 400px;
+width: 800px;
 flex-direction: column;
 padding: 10px;
 margin: 20px auto;
 
 }
-.container-fluid input[type="password"]{
+.container input[type="password"]{
     margin-left: 10px;
 }
 .badge{

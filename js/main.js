@@ -24,15 +24,13 @@ function log() {
             "alt"
           ).innerHTML = `${LogArr[i].USER_INPUT} is not valid`;
         }, 1000);
-        setInterval(() => {
-          window.open("index.html", "_self");
-        }, 5000);
+
         document.getElementById("user_input").focus();
       } else {
         document.getElementById("lod").style.opacity = 1;
         setInterval(() => {
           window.open("Users_Table.html", "_self");
-        }, 3000);
+        }, 1000);
       }
     }
   } else {
