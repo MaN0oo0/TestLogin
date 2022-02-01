@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body>
+
+
+        <div class="container-fluid text-center">
+            <h2>Login System</h2>
+
+            <div class="form-control-lg">
+                <label for="">UserName</label>
+                <input type="text" id="user_input">
+            </div>
+            <div class="form-control-lg">
+                <label for="">Password</label>
+                <input type="password" id="pass_input"
+                    autocomplete="current-password">
+            </div>
+            <button class="btn btn-success mt-3" onclick="log();">Log</button>
+            <a href="Register.html" class="badge badge-info mt-3 p-2"
+                id="done">Register</a>
+            <p class="alert-danger" id="alt"></p>
+            <div class="container mt-1 load" id="lod">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <script src="./js/Jquery-3.6.0.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script defer src="./js/main.js"></script>
+    </body>
+</html>

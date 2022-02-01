@@ -1,0 +1,84 @@
+.row{
+    margin: 20px auto;
+}
+.container-fluid{
+    background-color: #dddd;
+    height: 300px;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 400px;
+flex-direction: column;
+padding: 10px;
+margin: 20px auto;
+}
+.container-fluid input[type="password"]{
+    margin-left: 10px;
+}
+.badge{
+    opacity: 0;
+}
+.load{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: 20px auto;
+position: relative;
+width: 300px;
+height: 100px;
+opacity: 0;
+
+}
+.load span{
+    display: block;
+    position: relative;
+    margin-left: 25px;
+
+animation: Load 1s .2s  infinite ;
+
+
+}
+
+.load span:nth-child(2){
+    animation-delay: .3s;
+}
+
+.load span:nth-child(3){
+    animation-delay: .5s;
+}
+.load span:nth-child(4){
+    animation-delay: .8s;
+}
+
+.load span:nth-child(5){
+    animation-delay: 1s;
+}
+
+.load span::before{
+    content: "";
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    top: 0px;
+    left: 0px;
+ 
+}
+@keyframes Load{
+    0%,100%{
+       
+        opacity: .6;
+        transition: .4s ease;
+    }
+    50%{
+       
+        opacity: .9;
+        transition: .4s ease;
+    }
+
+}
+#ss{
+opacity: 0;
+display: none;
+}
