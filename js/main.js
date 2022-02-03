@@ -1,5 +1,4 @@
 var LogArr = [];
-
 function log() {
   let user = document.getElementById("user_input");
   let pwd = document.getElementById("pass_input");
@@ -16,21 +15,26 @@ function log() {
         LogArr[i].USER_INPUT != UsersArr[i].U_Name &&
         LogArr[i].PWD_INPUT != UsersArr[i].U_Pass
       ) {
-        document.getElementById("user_input").value = "";
-        document.getElementById("pass_input").value = "";
-        document.getElementById("lod").style.opacity = 1;
-        setInterval(() => {
-          document.getElementById(
-            "alt"
-          ).innerHTML = `${LogArr[i].USER_INPUT} is not valid`;
-        }, 1000);
+        for (let i = 1; i < UsersArr.length; i += 2) {
+          if (
+            LogArr[i].USER_INPUT != UsersArr[i].U_Name &&
+            LogArr[i].PWD_INPUT != UsersArr[i].U_Pass
+          ) {
+            continue;
+          } else {
+            window.open("Users_Table.html", "_self");
+          }
+        }
 
-        document.getElementById("user_input").focus();
+        // document.getElementById(
+        //   "alt"
+        // ).textContent = `${LogArr[i].USER_INPUT} Not Found`;
+        // // document.getElementById("lod").style.opacity = 1;
+        // document.getElementById("user_input").value = "";
+        // document.getElementById("pass_input").value = "";
+        // document.getElementById("user_input").focus();
       } else {
-        document.getElementById("lod").style.opacity = 1;
-        setInterval(() => {
-          window.open("Users_Table.html", "_self");
-        }, 1000);
+        window.open("Users_Table.html", "_self");
       }
     }
   } else {
@@ -51,6 +55,7 @@ function addUsers() {
     UsersArr.push(Users);
     localStorage.setItem("Users", JSON.stringify(UsersArr)); //SET LOCAL STORAGE
     show();
+    addUsers();
   }
 }
 
@@ -84,8 +89,9 @@ $(document).ready(function () {
     window.open("Register.html", "_blank");
   });
 });
-//insitliz array to save employee object
+
 let UsersArr;
+
 //GET LOCAL STORAGE
 if (localStorage.getItem("Users") == null) {
   UsersArr = [];
